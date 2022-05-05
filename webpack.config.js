@@ -1,9 +1,8 @@
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -16,7 +15,9 @@ module.exports = {
       template: './src/index.html',
     }),
     new FaviconsWebpackPlugin('./src/assets/favicon.png'),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'style.css',
+    }),
   ],
   output: {
     filename: 'index.js',
