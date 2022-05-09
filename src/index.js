@@ -8,34 +8,14 @@ const score = document.getElementById('score');
 const submit = document.querySelector('.submit');
 const refresh = document.querySelector('.refresh');
 
-const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Oawl0gMZlyz9hcMNVFUQ';
 const api = new Leaderboard(url);
 
-let gameID;
-let str;
-let requestUrl;
-
-const getGameID = () => {
-  if (localStorage.length) {
-    gameID = JSON.parse(localStorage.getItem('gameID'));
-    const regEx = /[\w]{20}/;
-    const result = JSON.stringify(gameID.result);
-    const data = result.match(regEx);
-    str = data[0].toString();
-  }
-};
-
 // On Page Load
-if (!localStorage.length) {
-  api.createGameID(url);
-} else {
-  getGameID();
-}
+const requestUrl = `${url}/scores/`;
+api.getData(requestUrl);
 
 setTimeout(() => {
-  getGameID();
-  requestUrl = `${url}${str}/scores/`;
-
   document.addEventListener('DOMContentLoaded', () => {
     api.getData(requestUrl);
   });
