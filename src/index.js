@@ -1,6 +1,7 @@
 import './style.scss';
 import Leaderboard from './modules/Leaderboard.js';
 import Display from './modules/Display.js';
+import Icon from './assets/github.svg';
 
 const name = document.getElementById('name');
 const score = document.getElementById('score');
@@ -84,3 +85,10 @@ window.onload = () => {
     display.createList(arr);
   }
 };
+
+// Footer Section
+const footer = document.getElementById('footer');
+const github = new Image();
+github.src = Icon;
+github.style.height = '15px';
+footer.append(github);

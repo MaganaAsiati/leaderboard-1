@@ -7,11 +7,16 @@ $border-check: 1px solid crimson;
   margin: 0;
   padding: 0;
   font-family: 'Fira Sans', sans-serif;
-  // border: $border-check;
 }
 
 body {
-  background-color: white;
+  background-color: #a40606;
+  background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 @mixin margin-sides($size) {
@@ -118,6 +123,20 @@ main {
 
       @include box-shadow();
     }
+  }
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  background-color: #dfe6e9;
+  padding: 0.5rem;
+
+  a {
+    text-decoration: none;
+    color: #101010;
   }
 }
 
