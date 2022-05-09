@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+
+$border-check: 1px solid crimson;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Sans', sans-serif;
+  // border: $border-check;
+}
+
+body {
+  background-color: white;
+}
+
+@mixin margin-sides($size) {
+  margin-left: $size;
+  margin-right: $size;
+}
+
+@mixin box-shadow {
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.75);
+}
+
+header {
+  @include margin-sides(2rem);
+
+  margin-top: 4rem;
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+main {
+  @include margin-sides(4rem);
+
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  // Recent Scores
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .refresh {
+        margin-left: 1rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+
+        @include box-shadow();
+      }
+    }
+
+    .display {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 200px;
+      overflow-y: scroll;
+      border: 3px solid #101010;
+      margin-top: 1.5rem;
+
+      .scores {
+        list-style-type: none;
+
+        & li {
+          font-size: 1.5rem;
+        }
+
+        & li:nth-child(even) {
+          background-color: lightgray;
+        }
+      }
+    }
+  }
+
+  // Add your score
+  .right {
+    margin-top: 2rem;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+
+    input {
+      display: block;
+      margin-top: 1rem;
+      width: 100%;
+      font-size: 1.25rem;
+      line-height: 1rem;
+      padding: 0.25rem 0.5rem 0.25rem;
+
+      &::placeholder {
+        padding: 0.5rem;
+      }
+    }
+
+    .submit {
+      margin-top: 1rem;
+      padding: 0.5rem;
+      float: right;
+      font-size: 1rem;
+
+      @include box-shadow();
+    }
+  }
+}
+
+// Desktop Version
+@media (min-width: 768px) {
+  header {
+    @include margin-sides(4rem);
+
+    h1 {
+      margin-top: 1rem;
+      font-size: 4rem;
+    }
+  }
+
+  main {
+    @include margin-sides(8rem);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    // Recent Scores
+    .left {
+      width: 45%;
+
+      .title {
+        h2 {
+          font-size: 2.25rem;
+        }
+
+        .refresh {
+          font-size: 1.25rem;
+        }
+      }
+
+      .display {
+        display: block;
+        height: 300px;
+        overflow-y: scroll;
+
+        .scores {
+          li {
+            font-size: 1.75rem;
+            padding: 0.5rem;
+          }
+        }
+      }
+    }
+
+    .right {
+      margin-top: 0;
+      width: 45%;
+
+      h3 {
+        font-size: 2.25rem;
+      }
+
+      input {
+        line-height: 2rem;
+        padding: 0.25rem 0.5rem 0.25rem;
+
+        &:focus::placeholder {
+          color: transparent;
+        }
+      }
+
+      .submit {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
