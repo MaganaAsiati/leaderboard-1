@@ -21,7 +21,7 @@ Screenshots can be found in the repository.
 
 ## Live Demo 🔗
 
-Check the live demo [here](https://mavericks-db.github.io/leaderboard/)👈
+Check the live demo [here](https://mavericks-db.github.io/leaderboard/dist)👈
 
 ## Getting Started
 
@@ -76,13 +76,13 @@ Please find the link in the Live Demo section.
 👤 **Mavericks Balitaan** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
 - GitHub: [![GitHub Badge](https://img.shields.io/badge/-mavericks--db-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/mavericks-db)
-  
+
 - Twitter: [![Twitter Badge](https://img.shields.io/badge/-mavericks__db-white?logo=Twitter&logoColor=1DA1F2&style=plastic)](https://twitter.com/mavericks_db)
-  
+
 - Facebook: [![Facebook Badge](https://img.shields.io/badge/-mavericksdb-white?logo=Facebook&logoColor=1877F2&style=plastic)](https://www.facebook.com/mavericksdb/)
-  
+
 - LinkedIn: [![LinkedIn Badge](https://img.shields.io/badge/-mavericks--db-white?logo=LinkedIn&logoColor=0A66C2&style=plastic)](https://www.linkedin.com/in/mavericks-db/)
-  
+
 - Gmail: [![Gmail Badge](https://img.shields.io/badge/-@balitaanmavericks-white?logo=Gmail&logoColor=EA4335&style=plastic)](mailto:balitaanmavericks@gmail.com)
 
 ## 🤝 Contributing
