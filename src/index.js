@@ -1,40 +1,21 @@
 import './style.scss';
 import Leaderboard from './modules/Leaderboard.js';
 import Display from './modules/Display.js';
+import Icon from './assets/github.svg';
 
 const name = document.getElementById('name');
 const score = document.getElementById('score');
 const submit = document.querySelector('.submit');
 const refresh = document.querySelector('.refresh');
 
-const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/';
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Oawl0gMZlyz9hcMNVFUQ';
 const api = new Leaderboard(url);
 
-let gameID;
-let str;
-let requestUrl;
-
-const getGameID = () => {
-  if (localStorage.length) {
-    gameID = JSON.parse(localStorage.getItem('gameID'));
-    const regEx = /[\w]{20}/;
-    const result = JSON.stringify(gameID.result);
-    const data = result.match(regEx);
-    str = data[0].toString();
-  }
-};
-
 // On Page Load
-if (!localStorage.length) {
-  api.createGameID(url);
-} else {
-  getGameID();
-}
+const requestUrl = `${url}/scores/`;
+api.getData(requestUrl);
 
 setTimeout(() => {
-  getGameID();
-  requestUrl = `${url}${str}/scores/`;
-
   document.addEventListener('DOMContentLoaded', () => {
     api.getData(requestUrl);
   });
@@ -84,3 +65,10 @@ window.onload = () => {
     display.createList(arr);
   }
 };
+
+// Footer Section
+const footer = document.getElementById('footer');
+const github = new Image();
+github.src = Icon;
+github.style.height = '15px';
+footer.append(github);
