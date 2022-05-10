@@ -15,6 +15,7 @@
 - [x] Code Editor: VS Code
 
 ## Website Mockup 📱 💻 🖥️
+![all-devices-black](https://user-images.githubusercontent.com/98527559/167603141-17827440-db24-4b9f-93f1-e73ce018dc27.png)
 
 ## Screenshots 📸
 Screenshots can be found in the repository.
@@ -71,7 +72,7 @@ This app is deployed in the GitHub Pages for easy viewing upon merged on the mai
 Please find the link in the Live Demo section.
 
 
-## Authors
+## Author
 
 👤 **Mavericks Balitaan** <img src="https://emojis.slackmojis.com/emojis/images/1531849430/4246/blob-sunglasses.gif?1531849430" width="20"/>
 
